@@ -64,3 +64,22 @@ function setWeather() {
     para.textContent = "";
   }
 }
+
+// coloring changing box
+const set = document.getElementById("select-theme");
+const box = document.getElementById("box");
+
+function update(bgColor, textColor) {
+  box.style.backgroundColor = bgColor;
+  box.style.color = textColor;
+}
+
+// Apply the initial style based on the default selected value
+update(
+  set.value === "black" ? "black" : "white",
+  set.value === "black" ? "white" : "black"
+);
+
+set.addEventListener("change", () => {
+  set.value === "black" ? update("black", "white") : update("white", "black");
+});
