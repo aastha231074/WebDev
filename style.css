@@ -18,6 +18,7 @@
 /* Colors Used */
 .logo {
   display: inline-block;
+  padding: 0 0 0 20px;
 }
 .header {
   display: flex;
